@@ -2,10 +2,11 @@
 
 A simple music request system, built with PHP and MYSQL.
 
-Class based system to expose data, returned in JSON format for further integration
+Class based system to expose data, returned in JSON format for further integration.
 
-Database not included, but table structure available for CREATE purposes
+Database not included, but table structure available for CREATE purposes (see tables directory for SQL files)
 
-This project uses the PEAR DB codebase. I've included the various files needed in the /DB/ directory, along with DB.php. The files were cloned on Friday 10th April 2015 from https://github.com/pear/DB
+Latest version of jQuery included in repo. For the latest version, please go to http://jquery.com/
 
-(Coded one Friday evening)
+No real styling used here. I just wanted to see if this was possible (and mess around with some Jquery/JS at the same time)
+
