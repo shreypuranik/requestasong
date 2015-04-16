@@ -7,4 +7,12 @@ if ($id){
     $tracks = $artist->getTracks();
     header('Content-Type: application/json');
     echo json_encode($tracks);
+    exit;
+}
+else{
+    $artists = Artist::getAllArtists();
+    header('Content-Type: application/json');
+    echo json_encode($artists);
+    exit;
+
 }

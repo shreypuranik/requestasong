@@ -54,6 +54,23 @@ class Artist
         return $this->tracksArray;
     }
 
+    public static function getAllArtists()
+    {
+        global $mysqli;
+        $db = $mysqli;
+        $artistsArray = array();
+        $sql = "select * from artist";
+        $datas = $db->query($sql);
+        while($row = $datas->fetch_assoc()){
+            $artist = array();
+            $artist['id'] = $row['id'];
+            $artist['name'] = $row['name'];
+            $artistsArray[] = $artist;
+        }
+
+        return $artistsArray;
+    }
+
 
 
 
