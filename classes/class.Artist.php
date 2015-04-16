@@ -1,7 +1,5 @@
 <?php
 
-include_once("../config.php");
-
 class Artist
 {
 
@@ -38,7 +36,7 @@ class Artist
     function setTracks()
     {
         $tracksArray = array();
-        $sql = "select distinct name from tracks where `artist` = '".$this->artistID."'";
+        $sql = "select * from tracks where `artist` = '".$this->artistID."'";
         $datas = $this->db->query($sql);
         while($row = $datas->fetch_assoc()){
             $track = array();
@@ -63,5 +61,4 @@ class Artist
 
 
 }
-
 
