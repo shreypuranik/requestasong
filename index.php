@@ -47,13 +47,10 @@ $artists = Artist::getAllArtists();
     $( document ).ready(function() {
         $(".artistClick").click(function(){
            var artist_id = $(this).attr('data-id');
-           console.log(artist_id);
             $("#tracks").empty();
             $.get('results.php?id='+artist_id, function(data){
-               //console.log(data);
                 var selectionString = ""
                     for(i=0; i< data.length; i++){
-
                         selectionString += "<li class= 'requestThisSong' onClick='requestSong("+data[i].id+");' data-id='"+data[i].id+"'>"+data[i].title+"</li>";
                     }
 
