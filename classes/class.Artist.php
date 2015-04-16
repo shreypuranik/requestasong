@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
 
 include_once("../config.php");
 
@@ -40,7 +38,7 @@ class Artist
     function setTracks()
     {
         $tracksArray = array();
-        $sql = "select * from tracks where `artist` = '".$this->artistID."'";
+        $sql = "select distinct name from tracks where `artist` = '".$this->artistID."'";
         $datas = $this->db->query($sql);
         while($row = $datas->fetch_assoc()){
             $track = array();
@@ -66,8 +64,4 @@ class Artist
 
 }
 
-$id = 2;
-$artist = new Artist($id);
-$tracks = $artist->getTracks();
-print_r($tracks); 
 
