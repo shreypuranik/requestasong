@@ -10,3 +10,4 @@ Latest version of jQuery included in repo. For the latest version, please go to 
 
 No real styling used here. I just wanted to see if this was possible (and mess around with some Jquery/JS at the same time)
 
+(To get a basic version working, I grabbed song/artist info from iTunes)
