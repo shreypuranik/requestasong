@@ -10,7 +10,7 @@ class Search
 
     /**
      * Static method to return search results
-     * based on supplied parameter. 
+     * based on supplied parameter.
      * @param $param
      * @return array
      */
