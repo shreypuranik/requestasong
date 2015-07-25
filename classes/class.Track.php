@@ -17,15 +17,30 @@ class Track
         $this->db = $mysqli;
     }
 
+    /**
+     * Declare the track name
+     * @param $data
+     */
+
     function setTrackName($data)
     {
         $this->trackName = $data;
     }
 
+    /**
+     * Get the track name
+     * @return mixed
+     */
     function getTrackName()
     {
         return $this->trackName;
     }
+
+
+    /**
+     * Set the track author ID
+     * @param $data
+     */
 
     function setTrackAuthorID($data)
     {
@@ -39,16 +54,32 @@ class Track
         return "Author";
     }
 
+    /**
+     * Get the Track Author ID
+     * for potential new class
+     * @return mixed
+     */
+
     function getTrackAuthorID()
     {
         return $this->trackAuthorID;
     }
+
+
+    /**
+     * Get the author name for the track
+     * @return mixed
+     */
 
     function getTrackAuthorName()
     {
         return $this->trackAuthorName;
     }
 
+
+    /**
+     * Declare the track via an SQL query
+     */
     function setUpTrack()
     {
         $sql = "select * from tracks where `id` = '".$this->trackID."'";
